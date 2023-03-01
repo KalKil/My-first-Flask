@@ -5,14 +5,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template(
-        "home.html.jinja", 
+        "home.html.jinja", "ahome.html.jinja", 
         my_variable="shabadaba do it like a miboo",
-        my_list=["apples", "bananas","oranges"]
-    )
+        my_list=["apples", "bananas","oranges"],
+        my_todo_list=["New Controller"," Rechargeable Batteries","Get more Bacon"]
+        )
 @app.route("/ping")
 def ping():
     return "<p>ping</p>"
 
 @app.route("/hello<name>")
-def hello(name):
+def hello(name): 
     return f"<p>Hello, {name} !</p>"
