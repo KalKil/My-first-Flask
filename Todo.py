@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -11,4 +11,12 @@ def index():
         todo=my_todo_list
         )
 
-@app.route("/add", methods=)
+@app.route("/add", methods=['POST'])
+def add():
+    new_todo = request.form['new_todo']
+
+    #ADD TO LIST
+
+    # REDIRECT BACK TO INDEX
+
+    return new_todo
