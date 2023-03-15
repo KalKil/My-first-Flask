@@ -4,7 +4,9 @@ import pymysql.cursors
 
 app = Flask(__name__)
 
-connection = 
+connection = pymysql.connect(
+    Host="10.100.33.60"
+)
 
 my_todo_list=["New Controller"," Rechargeable Batteries","Get more Bacon"]
 
