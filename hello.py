@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template(
-        "home.html.jinja", "ahome.html.jinja", 
+        "home.html.jinja", "Todo.html.jinja", 
         my_variable="shabadaba do it like a miboo",
         my_list=["apples", "bananas","oranges"],
         my_todo_list=["New Controller"," Rechargeable Batteries","Get more Bacon"]
